@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Colma2WebApp',
+    'Eventos',
 ]
 
 MIDDLEWARE = [
@@ -104,7 +105,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+#LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-eu'
 
 TIME_ZONE = 'UTC'
 
@@ -117,6 +119,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+
+"""Aqui declaramos de donde queremos que coja las imagenes"""
+MEDIA_URL='/Media/'
+MEDIA_ROOT= BASE_DIR / 'Media'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

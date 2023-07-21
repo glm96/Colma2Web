@@ -24,5 +24,6 @@ que apuntan a cada una de las aplicaciones"""
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Colma2WebApp.urls')),
+    path('eventos/',include('Eventos.urls')),
     
 ]
