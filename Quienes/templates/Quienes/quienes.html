@@ -1,0 +1,44 @@
+<!-- Heredamos de la plantlla base -->
+{% extends "Colma2WebApp/base.html" %}
+<!-- Cargamos lo que hay en la carpeta static -->
+{% load static %}
+<!-- Configuramos el contenido cambiante para este template-->
+{% block content %}
+<div class="container">
+
+
+
+
+
+<div class="row">
+
+{% for colma2 in colma2 %}
+
+<div class="col-md-3">
+  <div class="card" style="width: 100%; margin: 5px 5px;">
+
+    <img src="{{colma2.foto.url}}" class="card-img-top">
+
+    <div class="card-body" style="text-align: center;">
+
+      <h7 class="card-title" ><b>{{colma2.nombre}}</b></h7></br></br>
+      <h7 class="card-title" ><b>Origen:</b> {{colma2.origen}}</h7></br>
+      <h7 class="card-title" ><b>Descripción:</b> {{colma2.descripcion}}</h7></br>
+      <h7 class="card-title" ><b>Frase célebre:</b> {{colma2.frase}}</h7></br>
+
+
+
+    </div>
+
+
+
+
+</div>
+</div>
+
+
+  
+{% endfor %}
+</div>
+</div>
+  {% endblock %}

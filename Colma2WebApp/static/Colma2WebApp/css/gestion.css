@@ -277,3 +277,23 @@ ul.errorlist{
   font-style: italic;
   color: red;
 }
+
+/*Creamos un estilo de clase para el formulario
+Le damos el color verde del fondo de la pagina
+Lo alineamos al centro con el width 50%
+Le damos margen superior e inferior de 10px
+Le damos un padding superior e inferior de 1px y derecho e izquierdo de 0 px
+*/
+
+.contenedorFormulario{
+
+  background-color: rgba(24, 64, 8);
+
+  width: 60%;
+
+  margin: auto;
+
+  padding: 1px 0px;
+
+
+}

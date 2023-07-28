@@ -48,9 +48,13 @@ menu en el que estamos-->
           <li class="nav-item {% if request.path == '/quienes/' %}active{% endif %} px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'Quienes' %}">Quiénes somos</a>
           </li>
+          <li class="nav-item {% if request.path == '/galeria/' %}active{% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Galeria' %}">Galería</a>
+          </li>
           <li class="nav-item {% if request.path == '/eventos/' %}active{% endif %} px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'Eventos' %}">Próximos eventos</a>
           </li>
+
           <li class="nav-item {% if request.path == '/contacto/' %}active{% endif %} px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'Contacto' %}">Contacto</a>
           </li>
@@ -94,9 +98,9 @@ menu en el que estamos-->
 	        </a>
 	    </p>
         <p class="m-0 mbt">
-        	<a href="sample.html" class="link">Política de privacidad</a> ·
-        	<a href="sample.html" class="link">Aviso legal</a> ·
-        	<a href="sample.html" class="link">Cookies</a>
+        	<a href="#" class="link">Política de privacidad</a> ·
+        	<a href="#" class="link">Aviso legal</a>
+        	
 		</p>
         <p class="m-0 mbt1">&copy; Colma2 Web 2023</p>
       </div>

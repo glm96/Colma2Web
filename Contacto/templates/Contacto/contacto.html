@@ -1,0 +1,46 @@
+<!-- Heredamos de la plantlla base -->
+{% extends "Colma2WebApp/base.html" %}
+<!-- Cargamos lo que hay en la carpeta static -->
+{% load static %}
+<!-- Configuramos el contenido cambiante para este template-->
+{% block content %}
+
+<div class="contenedorFormulario" style="color: white;">
+
+  Puedes pedirnos que asistamos a algún evento o enviarnos sugerencias usando el siguiente formulario de contacto:
+
+</div>
+<!-- Representamos el formulario y le damos el formato de tabla, tanto en html como renderizandolo con el as_table -->
+<div class="contenedorFormulario">
+  
+
+
+
+  <form action="" method="POST" style="text-align: center;">
+     <!-- Esta linea es necesaria para que el formulario funcione correctamente -->
+    {% csrf_token %}
+  <table style="color: white;">
+
+    {{formulario.as_table}}
+  </table>
+  <input type="submit" value="Enviar" style="width: 150px">
+
+  
+
+
+
+</form>
+<!-- Si se recibe por parametro 'valido' -->
+{% if "valido" in request.GET %}
+
+<!-- Escribimos un mensaje e que la info ha sido enviada -->
+<p style="color: white;">Información enviada correctamente. Gracias.</p>
+
+{% endif %}
+
+</div>
+
+{{request.POST}}
+
+  
+  {% endblock %}

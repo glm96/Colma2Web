@@ -7,9 +7,8 @@ from django.conf.urls.static import static
 urlpatterns = [
 
     path('', views.home, name="Home"),
-    path('quienes/', views.quienes, name="Quienes"),
-    path('contacto/', views.contacto, name="Contacto"),
-    path('donativos/', views.donativos, name="Donativos"),
+    
+   
 ]
 
 "Esta linea es para declarar donde queramos que coja las imagenes"

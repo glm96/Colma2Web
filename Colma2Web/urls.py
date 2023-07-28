@@ -25,5 +25,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Colma2WebApp.urls')),
     path('eventos/',include('Eventos.urls')),
+    path('donativos/',include('Donativos.urls')),
+    path('contacto/',include('Contacto.urls')),
+    path('quienes/',include('Quienes.urls')),
+    path('galeria/',include('Galeria.urls')),
     
 ]

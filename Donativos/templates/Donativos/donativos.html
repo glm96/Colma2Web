@@ -1,0 +1,28 @@
+<!-- Heredamos de la plantlla base -->
+{% extends "Colma2WebApp/base.html" %}
+<!-- Cargamos lo que hay en la carpeta static -->
+{% load static %}
+<!-- Configuramos el contenido cambiante para este template-->
+{% block content %}
+
+   <!-- Heading -->
+   <section class="page-section clearfix">
+    <div class="container">
+      <div class="intro">
+        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'Colma2WebApp/img/donativos.jpg' %}" alt="" style="width: 60%;">
+        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+          <h2 class="section-heading mb-4" >
+            <span class="section-heading-lower">Donativos</span></br>
+            <span class="section-heading-upper">
+              Esta página está hecha totalmente sin ánimo de lucro. </br></br>
+              Pero puedes dejar un donativo para contribuir al mantenimiento de la web o dejar una propina a este grupo de amigos que para nada se lo gastarán en copas.</br></br>
+              Puedes mandar un bizum al 667740851. ¡Gracias!</span>
+          </h2>
+          
+         
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% endblock %}
