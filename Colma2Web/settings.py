@@ -22,9 +22,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-9z&uti6ckqo5e4%nkp4aa035lrn+#0%ue*pasmcs8&ik#lamr+'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
 ALLOWED_HOSTS = ['colma2.azurewebsites.net', 'localhost']
 
 
@@ -48,6 +45,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',   # Este simula un CDN para los static
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -124,8 +122,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'static/'
-STATICFILES_DIRS = [BASE_DIR / "Colma2WebApp/static/"]
+
+# Esto simula un CDN o similar para que los ficheros static se puedan leer con DEBUG = False para los deployments
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 """Aqui declaramos de donde queremos que coja las imagenes"""
 MEDIA_URL='/Media/'
