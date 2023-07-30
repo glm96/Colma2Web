@@ -18,6 +18,10 @@ from django.contrib import admin
 from django.urls import path, include
 from Colma2WebApp import views
 
+from django.conf import settings
+from django.views.static import serve
+from django.urls import re_path
+
 """Aqui vamos a declarar las urls, que apuntan al proyecto en general y luego
 que apuntan a cada una de las aplicaciones"""
 """La de '' apunta a las urls de la app Colma2WebApp"""
@@ -29,5 +33,10 @@ urlpatterns = [
     path('contacto/',include('Contacto.urls')),
     path('quienes/',include('Quienes.urls')),
     path('galeria/',include('Galeria.urls')),
-    
+]
+
+urlpatterns += [
+    re_path(r'^media/(?P<path>.*)$', serve, {
+        'document_root': settings.MEDIA_ROOT,
+    }),
 ]
