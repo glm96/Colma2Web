@@ -124,6 +124,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = './static/'
 
 """Aqui declaramos de donde queremos que coja las imagenes"""
 MEDIA_URL='/Media/'
