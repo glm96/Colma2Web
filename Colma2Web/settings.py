@@ -124,7 +124,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = './static'
+STATIC_ROOT = BASE_DIR / 'static/'
+STATICFILES_DIRS = [BASE_DIR / "Colma2WebApp/static/"]
 
 """Aqui declaramos de donde queremos que coja las imagenes"""
 MEDIA_URL='/Media/'
