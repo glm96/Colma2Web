@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'Donativos',
     'Contacto',
     'Quienes',
-    'Info',
+    #'Info',
     'Galeria',
 ]
 
