@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-9z&uti6ckqo5e4%nkp4aa035lrn+#0%ue*pasmcs8&ik#lamr+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['colma2.azurewebsites.net']
+ALLOWED_HOSTS = ['colma2.azurewebsites.net', 'localhost']
 
 
 # Application definition
@@ -124,7 +124,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = './static/'
+STATIC_ROOT = './Colma2WebApp/static/'
 
 """Aqui declaramos de donde queremos que coja las imagenes"""
 MEDIA_URL='/Media/'
