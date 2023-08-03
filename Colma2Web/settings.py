@@ -120,7 +120,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
-
+#DEBUG = True
 STATIC_URL = 'static/'
 
 # Esto simula un CDN o similar para que los ficheros static se puedan leer con DEBUG = False para los deployments
