@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,6 +23,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-9z&uti6ckqo5e4%nkp4aa035lrn+#0%ue*pasmcs8&ik#lamr+'
 
 ALLOWED_HOSTS = ['colma2.azurewebsites.net', 'localhost']
+os.environ["DEBUG"] = True
+DEBUG = os.getenv("DEBUG", True)
 
 
 # Application definition
